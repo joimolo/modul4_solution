@@ -12,7 +12,6 @@
       url: '/',
       templateUrl: 'src/templates/home.template.html'
     })
-
     .state('categoriesList', {
       url: '/categories-list',
       templateUrl: 'src/templates/main-categories.template.html',
@@ -30,8 +29,6 @@
       resolve: {
         items: ['$stateParams', 'MenuDataService',
               function ($stateParams, MenuDataService) {
-                console.log(MenuDataService.getItemsForCategory($stateParams.catShortName));
-                console.log('shortname in routes ' + $stateParams.catShortName);
                 return MenuDataService.getItemsForCategory($stateParams.catShortName);
               }]
       }
