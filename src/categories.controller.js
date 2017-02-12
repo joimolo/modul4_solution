@@ -8,6 +8,7 @@
   function CategoriesController(items) {
     var lista = this;
     lista.items = items.data;
+    console.log("lista.items" + lista.items)
   }
 
 })();
